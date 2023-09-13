@@ -64,6 +64,21 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<!-- @see https://qiita.com/charon/items/9946aababa76d586fe6c -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.4.2</version>
+				<configuration>
+					<!-- デフォルトのコンフィグファイルを変更したい場合に修正
+                    <configurationFile>${project.basedir}/src/main/resources/generatorConfig.xml</configurationFile>
+                    -->
+					<overwrite>true</overwrite>
+					<!-- 全てのクラスを依存関係に追加する -->
+					<includeAllDependencies>true</includeAllDependencies>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
