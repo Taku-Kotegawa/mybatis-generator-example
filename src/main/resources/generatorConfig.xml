@@ -91,7 +91,7 @@
 
         <!-- 対象テーブルの選定 -->
         <!-- schema: これを指定するとSQLが From schema.table の形になる -->
-        <table tableName="employee">
+        <table tableName="employee" schema="public">
             <generatedKey column="emp_id" sqlStatement="JDBC" identity="true"/>
         </table>
 
