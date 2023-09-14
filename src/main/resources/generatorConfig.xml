@@ -23,7 +23,7 @@
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
 
         <!-- Modelクラスにビルダーメソッドを追加 -->
-        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"/>
+        <!-- <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"/>-->
 
         <!-- @Mapperアノテーションを追加 -->
         <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"/>
@@ -92,8 +92,10 @@
         <!-- 対象テーブルの選定 -->
         <!-- schema: これを指定するとSQLが From schema.table の形になる -->
         <table tableName="employee" schema="public">
-            <generatedKey column="emp_id" sqlStatement="JDBC" identity="true"/>
+            <generatedKey column="id" sqlStatement="JDBC" identity="true"/>
         </table>
+
+        <table tableName="organization" schema="public" />
 
     </context>
 </generatorConfiguration>
