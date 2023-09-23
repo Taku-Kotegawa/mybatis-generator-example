@@ -41,8 +41,7 @@ COMMENT ON COLUMN "employee"."organization_id" IS '所属部署';
 COMMENT ON COLUMN "employee"."password" IS 'パスワード';
 COMMENT ON COLUMN "employee"."position_id" IS '役職';
 COMMENT ON COLUMN "employee"."status" IS 'ステータス';
-```
-```dbn-psql
+
 create table "organization" (
 "organization_id" BIGINT not null,
 "version" BIGINT not null,
@@ -68,5 +67,9 @@ COMMENT ON COLUMN "organization"."group_name" IS '部署名';
 COMMENT ON COLUMN "organization"."parent_id" IS '親部署ID';
 COMMENT ON COLUMN "organization"."status" IS 'ステータス';
 
+create table "position" (
+"position_id" BIGINT not null,
+"version" BIGINT not null,
+constraint "position_pkey" primary key ("position_id", "version"));
 ```
 

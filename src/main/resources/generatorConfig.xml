@@ -96,6 +96,7 @@
         </table>
 
         <table tableName="organization" schema="public" />
+        <table tableName="position" schema="public" />
 
     </context>
 </generatorConfiguration>
